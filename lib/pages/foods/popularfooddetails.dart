@@ -36,8 +36,14 @@ class PopularFoodsDetails extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  IconFoodsDt(icon: Icons.arrow_back_ios),
-                  IconFoodsDt(icon: Icons.shopping_cart_checkout_outlined),
+                  IconFoodsDt(
+                    icon: Icons.arrow_back_ios,
+                    iconSize: Dimensions.icon16,
+                  ),
+                  IconFoodsDt(
+                    icon: Icons.shopping_cart_checkout_outlined,
+                    iconSize: Dimensions.icon16,
+                  ),
                 ],
               )),
           //Presentacion

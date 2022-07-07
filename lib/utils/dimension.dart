@@ -16,6 +16,7 @@ class Dimensions {
   static double heightT40 = screenHeight / 17;
   static double heightT45 = screenHeight / 15;
   static double heightT65 = screenHeight / 10;
+  static double heightT80 = screenHeight / 8;
 
 //Width paddin and margin
   static double widthT5 = screenHeight / 135;

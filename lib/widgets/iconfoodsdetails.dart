@@ -1,4 +1,3 @@
-import 'package:e_commerce_food/utils/dimension.dart';
 import 'package:flutter/material.dart';
 
 class IconFoodsDt extends StatelessWidget {
@@ -6,6 +5,7 @@ class IconFoodsDt extends StatelessWidget {
   final Color backgroundColor;
   final Color iconColor;
   final double size;
+  final double iconSize;
 
   const IconFoodsDt({
     Key? key,
@@ -13,6 +13,7 @@ class IconFoodsDt extends StatelessWidget {
     this.backgroundColor = const Color(0xFFfcf4e4),
     this.iconColor = const Color(0xFF756d54),
     this.size = 40,
+    this.iconSize = 16,
   }) : super(key: key);
 
   @override
@@ -27,7 +28,7 @@ class IconFoodsDt extends StatelessWidget {
       child: Icon(
         icon,
         color: iconColor,
-        size: Dimensions.icon16,
+        size: iconSize,
       ),
     );
   }

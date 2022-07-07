@@ -1,10 +1,16 @@
+import 'package:e_commerce_food/controllers/popularproduct_controller.dart';
+import 'package:e_commerce_food/controllers/recommendedproducts_controller.dart';
 import 'package:e_commerce_food/pages/foods/popularfooddetails.dart';
 import 'package:e_commerce_food/pages/foods/recommendedfoodsdetails.dart';
 import 'package:e_commerce_food/pages/home/mainfoodpage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'helper/dependencies.dart' as dep;
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await dep.init();
+
   runApp(const MyApp());
 }
 
@@ -14,6 +20,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    Get.find<PopularProductController>().getPopularProductList();
+    Get.find<RecommendedProductController>().getRecommendedProductList();
+
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
@@ -29,7 +38,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const RecommendedFood(),
+      home: MainFood(),
     );
   }
 }

@@ -14,7 +14,7 @@ class MainFood extends StatefulWidget {
 class _MainFoodState extends State<MainFood> {
   @override
   Widget build(BuildContext context) {
-    print("la altura es:" + MediaQuery.of(context).size.height.toString());
+    //print("la altura es:" + MediaQuery.of(context).size.height.toString());
     return Scaffold(
         body: Column(
       children: [
